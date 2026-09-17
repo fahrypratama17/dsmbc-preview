@@ -13,7 +13,7 @@ const getServerSnapshot = () => null;
 
 const pad = (value: number) => String(value).padStart(2, "0");
 
-const CountdownSection = ({
+const Countdown = ({
   closeRegistration,
   onComplete,
 }: {
@@ -58,4 +58,4 @@ const CountdownSection = ({
   );
 };
 
-export default CountdownSection;
+export default Countdown;

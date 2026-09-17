@@ -2,14 +2,14 @@
 
 import { Calendar, Clock } from "lucide-react";
 import Button from "@/shared/components/Button";
-import CountdownSection from "@/feature/components/CountDownSection";
+import CountDown from "@/shared/components/CountDown";
 
 const CLOSE_REGISTRATION = new Date("2026-10-10T00:00:00+07:00");
 const GUIDEBOOK_URL = "/files/Guidebook DSMBC 2025.pdf";
 // TODO: replace with the actual registration link
 const REGISTRATION_URL = "#";
 
-const Countdown = () => {
+const CountdownSection = () => {
   const handleClickDownload = () => {
     window.open(encodeURI(GUIDEBOOK_URL), "_blank", "noopener,noreferrer");
   };
@@ -26,7 +26,7 @@ const Countdown = () => {
         <hr className="border-light_blue border w-16"/>
       </div>
       <div className="flex flex-col gap-6 lg:gap-10">
-        <CountdownSection closeRegistration={CLOSE_REGISTRATION} />
+        <CountDown closeRegistration={CLOSE_REGISTRATION} />
         <div className="flex gap-4 items-center justify-center text-gray-400 font-semibold text-sm">
           <div className="flex gap-1 items-center">
             <Calendar size={24} />
@@ -50,4 +50,4 @@ const Countdown = () => {
   );
 };
 
-export default Countdown;
+export default CountdownSection;

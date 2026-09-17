@@ -6,18 +6,20 @@ import About from "@/feature/components/About";
 import Timeline from "@/feature/components/Timeline";
 import LearningPath from "@/feature/components/LearningPath";
 import Benefit from "@/feature/components/Benefit";
+import CTA from "@/feature/components/CTA";
 
 const PageContainer = () => {
   return (
     <>
       <Navbar />
-      <section className="px-6 pt-28 md:px-24 md:pt-40">
+      <section className="pt-28 md:pt-40">
         <Hero />
         <CountdownSection />
         <About />
         <Timeline />
         <LearningPath />
         <Benefit />
+        <CTA />
       </section>
       <Footer />
     </>

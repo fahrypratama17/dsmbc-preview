@@ -1,9 +1,10 @@
 import Hero from "@/feature/components/Hero";
 import Footer from "@/feature/components/Footer";
 import Navbar from "@/feature/components/Navbar";
-import CountdownSection from "@/feature/components/Countdown";
+import CountdownSection from "@/feature/components/CountdownSection";
 import About from "@/feature/components/About";
 import Timeline from "@/feature/components/Timeline";
+import LearningPath from "@/feature/components/LearningPath";
 
 const PageContainer = () => {
   return (
@@ -14,6 +15,7 @@ const PageContainer = () => {
         <CountdownSection />
         <About />
         <Timeline />
+        <LearningPath />
       </section>
       <Footer />
     </>

@@ -42,9 +42,15 @@ const Timeline = () => {
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col items-center mx-auto lg:mx-8"
+      className="relative flex flex-col items-center mx-auto lg:mx-8 gap-8 lg:gap-10 mb-28 lg:mb-44 "
     >
-      <div className="font-WorkSans text-xl absolute left-4 top-16 bottom-20 h-[470px] lg:h-[540px] w-[3px] bg-orange-500 lg:left-1/2 lg:-translate-x-1/2" />
+      <div className="flex gap-4 items-center justify-center text-light-blue">
+        <hr className="border-light_blue border-1 w-16"/>
+        <h1 className="text-center font-semibold text-base lg:text-xl">TIMELINE</h1>
+        <hr className="border-light_blue border-1 w-16"/>
+      </div>
+
+      <div className="font-WorkSans text-xl absolute left-4 top-16 bottom-20 h-170 lg:h-200 w-[3px] bg-orange-500 lg:left-1/2 lg:-translate-x-1/2" />
 
       {timelineData.map((item, index) => (
         <div

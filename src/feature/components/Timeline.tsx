@@ -42,7 +42,7 @@ const Timeline = () => {
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col items-center mx-auto lg:mx-8 gap-8 lg:gap-10 mb-28 lg:mb-44 "
+      className="relative flex flex-col items-center mx-auto lg:mx-8 gap-8 lg:gap-10 mb-28 lg:mb-44 px-6 md:px-24"
     >
       <div className="flex gap-4 items-center justify-center text-light-blue">
         <hr className="border-light_blue border-1 w-16"/>

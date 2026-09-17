@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="flex w-full">
+    <section className="flex w-full px-6 md:px-24">
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
         <Image
           src={("/images/Photo1.svg")}

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const LearningPath = () => {
   return (
-    <section className="flex flex-col gap-8 lg:gap-10 mb-28 lg:mb-44">
+    <section className="flex flex-col gap-8 lg:gap-10 mb-28 lg:mb-44 px-6 md:px-24">
       <div className="flex gap-4 items-center justify-center text-light-blue">
         <hr className="border-light_blue border-1 w-16"/>
         <h1 className="text-center font-semibold text-base lg:text-xl">LEARNING PATH</h1>

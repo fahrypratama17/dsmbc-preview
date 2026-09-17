@@ -19,7 +19,7 @@ const CountdownSection = () => {
   };
 
   return (
-    <div id="countdown" className="flex flex-col gap-8 lg:gap-10 py-28 lg:py-44">
+    <div id="countdown" className="flex flex-col gap-8 lg:gap-10 py-28 lg:py-44 px-6 md:px-24">
       <div className="flex gap-4 items-center justify-center text-light_blue">
         <hr className="border-light_blue border w-16"/>
         <h1 className="text-center font-semibold text-base lg:text-xl">COUNTDOWN</h1>

@@ -25,7 +25,7 @@ const benefits = [
 
 const Benefit = () => {
   return (
-    <section className="flex flex-col gap-8 lg:gap-10 mb-28 lg:mb-44">
+    <section className="flex flex-col gap-8 lg:gap-10 mb-28 lg:mb-44 px-6 md:px-24">
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-8 lg:gap-10 justify-left">
           <div className="flex gap-4 items-center justify-left text-light-blue">

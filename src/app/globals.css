@@ -8,6 +8,8 @@ body {
 @theme {
   --color-dark-blue: #143045;
   --color-light-blue: #0186c6 ;
+  --color-error-100: #fce8e9;
+  --color-error-primary: #e6323d;
 }
 
 input[type="date"]::-webkit-input-placeholder {

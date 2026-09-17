@@ -5,6 +5,7 @@ import CountdownSection from "@/feature/components/CountdownSection";
 import About from "@/feature/components/About";
 import Timeline from "@/feature/components/Timeline";
 import LearningPath from "@/feature/components/LearningPath";
+import Benefit from "@/feature/components/Benefit";
 
 const PageContainer = () => {
   return (
@@ -16,6 +17,7 @@ const PageContainer = () => {
         <About />
         <Timeline />
         <LearningPath />
+        <Benefit />
       </section>
       <Footer />
     </>

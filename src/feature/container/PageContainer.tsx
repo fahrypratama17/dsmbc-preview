@@ -8,9 +8,8 @@ const PageContainer = () => {
       <Navbar />
       <section className="px-6 pt-28 md:px-24 md:pt-40">
         <Hero />
-        <Footer />
       </section>
-
+      <Footer />
     </>
   );
 };

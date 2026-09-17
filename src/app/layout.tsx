@@ -25,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
 
-      <body className="min-h-full flex flex-col relative overflow-x-hidden">
+      <body className="relative overflow-x-hidden">
         <BackgroundDecorations />
         {children}
       </body>

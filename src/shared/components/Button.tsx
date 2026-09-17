@@ -36,7 +36,7 @@ export const Button = ({
   return (
     <button
       className={cn(
-        `flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 font-WorkSans font-semibold ${variant === "primary" ? " text-white hover:border-light_blue bg-light_blue hover:bg-white hover:text-light_blue" : "border-orange-500 bg-orange-500 text-neutral-50 hover:border-orange-500 hover:bg-white hover:text-orange-500"}`,
+        `flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 font-WorkSans font-semibold ${variant === "primary" ? " text-white hover:border-light-blue bg-light-blue hover:bg-white hover:text-light-blue" : "border-orange-500 bg-orange-500 text-neutral-50 hover:border-orange-500 hover:bg-white hover:text-orange-500 cursor-pointer"}`,
         className,
       )}
       {...props}

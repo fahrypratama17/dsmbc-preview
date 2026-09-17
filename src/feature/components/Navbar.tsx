@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed left-0 right-0 flex items-center justify-between gap-12 p-4 px-10 transition-colors duration-300 lg:px-24 z-20 ${isScrolled ? "bg-dark_blue bg-opacity-90" : "bg-dark_blue"
+      className={`fixed left-0 right-0 flex items-center justify-between gap-12 p-4 px-10 transition-colors duration-300 lg:px-24 z-20 ${isScrolled ? "bg-dark-blue bg-opacity-90" : "bg-dark-blue"
       }`}
     >
       <Image src={"/images/BCC.svg"} alt="BCC Logo" width={117} height={48} />
@@ -126,8 +126,8 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, isActive }) => {
     <Link
       href={href}
       className={`px-4 font-WorkSans font-medium leading-none ${
-        isActive ? "font-semibold text-light_blue" : "text-white"
-      } hover:text-light_blue`}
+        isActive ? "font-semibold text-light-blue" : "text-white"
+      } hover:text-light-blue`}
     >
       {children}
     </Link>

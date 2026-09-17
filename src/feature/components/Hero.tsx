@@ -18,13 +18,13 @@ const Hero = () => {
         <Image
           src={("/images/Photo1.svg")}
           alt="DSMBC 2025"
-          className="text-center mx-auto items-center lg:justify-left lg:w-[505px] md:h-[464px]"
+          className="text-center mx-auto items-center lg:justify-left lg:w-126.25 md:h-116"
           width={364}
           height={334}
         />
         <div className="flex flex-col gap-5 lg:gap-10">
           <div className="flex flex-col gap-3">
-            <Label text="Data Science" className="bg-orange-500 bg-opacity-20 text-orange-500 text-xs lg:text-sm"/>
+            <Label text="Data Science" className="bg-orange-500/20 text-orange-500 text-xs lg:text-sm"/>
             <h1 className="font-semibold text-3xl lg:text-5xl text-slate-700">Data Science Mini Bootcamp 2026</h1>
             <h2 className="font-medium text-xl lg:text-2xl text-slate-700">&quot;Data Odyssey: A Journey from Data to Intelligence&quot;</h2>
           </div>

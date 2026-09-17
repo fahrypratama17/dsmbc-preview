@@ -5,6 +5,10 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+@theme {
+  --color-dark-blue: #143045;
+}
+
 input[type="date"]::-webkit-input-placeholder {
   color: transparent;
 }

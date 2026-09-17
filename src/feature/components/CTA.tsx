@@ -4,14 +4,12 @@ import Image from "next/image";
 import Label from "@/shared/components/Label";
 import Button from "@/shared/components/Button";
 import {ArrowRight} from "lucide-react";
+import { REGISTRATION_URL } from "@/shared/constants/links";
 
 const CTA = () => {
   const handleClickRegister = () => {
-    window.open("https://docs.google.com/forms/d/e/1FAIpQLSfrYhzfidJe7IktQKQjDJbgG39XwlvLuzQBfi-NjYMpwYguWA/viewform", "_blank");
-    setTimeout(() => {
-      return;
-    }, 1000);
-  }
+    window.open(REGISTRATION_URL, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <section className="flex w-full mb-28 lg:mb-44 px-6 py-10 lg:px-48 lg:py-20 relative bg-linear-to-b from-dark-blue to-[#183F5C]">

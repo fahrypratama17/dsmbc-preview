@@ -3,11 +3,9 @@
 import { Calendar, Clock } from "lucide-react";
 import Button from "@/shared/components/Button";
 import CountDown from "@/shared/components/CountDown";
+import { GUIDEBOOK_URL, REGISTRATION_URL } from "@/shared/constants/links";
 
 const CLOSE_REGISTRATION = new Date("2026-10-10T00:00:00+07:00");
-const GUIDEBOOK_URL = "/files/Guidebook DSMBC 2025.pdf";
-// TODO: replace with the actual registration link
-const REGISTRATION_URL = "#";
 
 const CountdownSection = () => {
   const handleClickDownload = () => {

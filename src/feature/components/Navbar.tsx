@@ -7,7 +7,7 @@ import Button from "@/shared/components/Button";
 import {links} from "@/feature/data/data";
 import { X, Menu } from "lucide-react";
 import Image from "next/image";
-import {router} from "next/client";
+import { REGISTRATION_URL } from "@/shared/constants/links";
 
 type NavLinkProps = {
   href: string;
@@ -26,10 +26,7 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const BCC_BASE_URL = "https://bccfilkom.ub.ac.id/";
   const handleClick = () => {
-    router.push(`https://docs.google.com/forms/d/e/1FAIpQLSfrYhzfidJe7IktQKQjDJbgG39XwlvLuzQBfi-NjYMpwYguWA/viewform`);
-    setTimeout(() => {
-      return;
-    }, 1000);
+    window.open(REGISTRATION_URL, "_blank", "noopener,noreferrer");
   };
 
   useEffect(() => {

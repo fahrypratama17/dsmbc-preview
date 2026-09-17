@@ -45,21 +45,24 @@ const Timeline = () => {
       className="relative flex flex-col items-center mx-auto lg:mx-8 gap-8 lg:gap-10 mb-28 lg:mb-44 px-6 md:px-24"
     >
       <div className="flex gap-4 items-center justify-center text-light-blue">
-        <hr className="border-light-blue border-1 w-16"/>
+        <hr className="border-light-blue border w-16"/>
         <h1 className="text-center font-semibold text-base lg:text-xl">TIMELINE</h1>
-        <hr className="border-light-blue border-1 w-16"/>
+        <hr className="border-light-blue border w-16"/>
       </div>
 
-      <div className="font-WorkSans text-xl absolute left-4 top-30 bottom-20 h-150 lg:h-185 w-[3px] bg-orange-500 lg:left-1/2 lg:-translate-x-1/2" />
-
+      <div className="flex flex-col gap-8 lg:gap-10 items-start lg:items-center w-fit lg:w-full mx-auto">
       {timelineData.map((item, index) => (
         <div
           key={index}
           className="timeline-item relative flex flex-col lg:flex-row items-start lg:items-center justify-between w-full max-w-3xl py-4 lg:py-8"
         >
+          {index < timelineData.length - 1 && (
+            <div className="absolute w-0.75 bg-orange-500 left-[16.5px] top-9.5 -bottom-17.5 lg:left-1/2 lg:-translate-x-1/2 lg:top-1/2 lg:-bottom-[calc(50%+2.5rem)]" />
+          )}
+
           <div className="flex lg:hidden w-full">
             <div className="relative flex items-start justify-center mr-10 mt-1">
-              <div className="bg-white p-[6px] rounded-full z-10">
+              <div className="bg-white p-1.5 rounded-full z-10">
                 <div
                   className={`bg-orange-500 ${
                     item.type === "start" || item.type === "end"
@@ -79,7 +82,7 @@ const Timeline = () => {
                 style={
                   item.type === "start"
                     ? {
-                      backgroundImage: `url("/images/bg-chip.svg"))`,
+                      backgroundImage: `url("/images/bg-chip.svg")`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }
@@ -145,6 +148,7 @@ const Timeline = () => {
           )}
         </div>
       ))}
+      </div>
     </div>
   );
 };

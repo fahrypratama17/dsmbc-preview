@@ -50,7 +50,7 @@ const Timeline = () => {
         <hr className="border-light_blue border-1 w-16"/>
       </div>
 
-      <div className="font-WorkSans text-xl absolute left-4 top-16 bottom-20 h-170 lg:h-200 w-[3px] bg-orange-500 lg:left-1/2 lg:-translate-x-1/2" />
+      <div className="font-WorkSans text-xl absolute left-4 top-30 bottom-20 h-150 lg:h-185 w-[3px] bg-orange-500 lg:left-1/2 lg:-translate-x-1/2" />
 
       {timelineData.map((item, index) => (
         <div

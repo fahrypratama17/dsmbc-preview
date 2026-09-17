@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
 
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-dark_blue bg-opacity-50 lg:hidden"
+          className="fixed inset-0 bg-dark-blue bg-opacity-50 lg:hidden"
           onClick={() => setMenuOpen(false)}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") setMenuOpen(false);
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
       )}
 
       <div
-        className={`fixed left-0 top-0 h-full w-3/4 bg-dark_blue px-10 shadow-lg transition-transform duration-300 ${
+        className={`fixed left-0 top-0 h-full w-3/4 bg-dark-blue px-10 shadow-lg transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } lg:hidden`}
       >

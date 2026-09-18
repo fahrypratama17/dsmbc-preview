@@ -36,7 +36,10 @@ export const Button = ({
   return (
     <button
       className={cn(
-        `flex w-auto items-center justify-center gap-x-2 rounded-lg border px-5 py-2 font-WorkSans font-semibold ${variant === "primary" ? " text-white hover:border-light-blue bg-light-blue hover:bg-white hover:text-light-blue" : "border-orange-500 bg-orange-500 text-neutral-50 hover:border-orange-500 hover:bg-white hover:text-orange-500 cursor-pointer"}`,
+        "group/btn shine relative overflow-hidden flex w-auto cursor-pointer items-center justify-center gap-x-2 rounded-lg border px-5 py-2 font-WorkSans font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2",
+        variant === "primary"
+          ? "text-white hover:border-light-blue bg-light-blue hover:bg-white hover:text-light-blue hover:shadow-light-blue/30 focus-visible:outline-light-blue"
+          : "border-orange-500 bg-orange-500 text-neutral-50 hover:border-orange-500 hover:bg-white hover:text-orange-500 hover:shadow-orange-500/30 focus-visible:outline-orange-500",
         className,
       )}
       {...props}

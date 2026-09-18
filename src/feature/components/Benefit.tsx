@@ -1,23 +1,26 @@
 import Image from "next/image";
+import Reveal from "@/shared/components/Reveal";
+import SectionHeading from "@/shared/components/SectionHeading";
+import TiltCard from "@/shared/components/TiltCard";
 
 const benefits = [
   {
-    icon: ("/images/image-1.svg"),
+    icon: "/images/image-1.svg",
     title: "Upgrading Your Skills",
     desc: "Enhance your technical & analytical skill abilities",
   },
   {
-    icon: ("/images/image-2.svg"),
+    icon: "/images/image-2.svg",
     title: "Exclusive Mentorship",
     desc: "Direct access to experienced professional mentors",
   },
   {
-    icon: ("/images/image-3.svg"),
+    icon: "/images/image-3.svg",
     title: "Certificate of Completion",
     desc: "Official Winner Certificate – BCC FILKOM UB Kaggle Competition",
   },
   {
-    icon: ("/images/image-4.svg"),
+    icon: "/images/image-4.svg",
     title: "Getting More Networking",
     desc: "Meet peers & professionals in the data science field",
   },
@@ -28,28 +31,33 @@ const Benefit = () => {
     <section className="flex flex-col gap-8 lg:gap-10 mb-28 lg:mb-44 px-6 md:px-24">
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-8 lg:gap-10 justify-left">
-          <div className="flex gap-4 items-center justify-left text-light-blue">
-            <h1 className="text-center font-semibold text-base lg:text-xl">Benefit</h1>
-            <hr className="border-light-blue border-1 w-16"/>
-          </div>
-          <h1 className="text-left font-semibold text-2xl lg:text-4xl text-slate-700">
-            <span className="text-orange-500">Benefits</span>  You<br /> Will Get</h1>
+          <SectionHeading text="Benefit" align="left" />
+          <Reveal from="left" distance={32}>
+            <h1 className="text-left font-semibold text-2xl lg:text-4xl text-slate-700">
+              <span className="text-orange-500">Benefits</span> You
+              <br /> Will Get
+            </h1>
+          </Reveal>
         </div>
         <Image
-          src={("/images/pattern-1.svg")}
-          alt="-"
-          className="justify-end items-end lg:w-[85px] lg:h-[143px]"
+          src={"/images/pattern-1.svg"}
+          alt=""
+          className="animate-float-soft justify-end items-end lg:w-21.25 lg:h-35.75"
           width={57}
           height={114}
         />
       </div>
-      <div className="flex flex-wrap gap-4 lg:gap-3 justify-center mx-auto">
-        {benefits.map((f, i) => (
-          <div
-            key={i}
-            className="group flex flex-col gap-4 lg:gap-6 px-5 lg:px-7 py-6 lg:py-10 rounded-xl w-[146px] h-[246px] lg:w-[290px] lg:h-[330px] bg-neutral-50 border border-gray-200 hover:bg-light-blue hover:border-transparent hover:text-neutral-50 transition"
+      <Reveal
+        className="flex flex-wrap gap-4 lg:gap-3 justify-center mx-auto"
+        stagger={120}
+        distance={40}
+      >
+        {benefits.map((f) => (
+          <TiltCard
+            key={f.title}
+            className="group flex flex-col gap-4 lg:gap-6 px-5 lg:px-7 py-6 lg:py-10 rounded-xl w-36.5 h-61.5 lg:w-72.5 lg:h-82.5 bg-neutral-50 border border-gray-200 hover:bg-light-blue hover:border-transparent hover:text-neutral-50 hover:shadow-2xl hover:shadow-light-blue/30"
           >
-            <div className="p-2 lg:p-3 w-fit rounded-full bg-light-blue group-hover:bg-gradient-to-r group-hover:from-gray-200 group-hover:to-white transition">
+            <div className="p-2 lg:p-3 w-fit rounded-full bg-light-blue transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-linear-to-r group-hover:from-gray-200 group-hover:to-white">
               <div
                 className="w-5 h-5 lg:w-8 lg:h-8 bg-white group-hover:bg-light-blue transition"
                 style={{
@@ -68,9 +76,9 @@ const Benefit = () => {
                 {f.desc}
               </p>
             </div>
-          </div>
+          </TiltCard>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 };

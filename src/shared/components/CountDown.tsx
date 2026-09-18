@@ -44,13 +44,26 @@ const Countdown = ({
     <div className="flex flex-col items-center justify-center w-full">
       <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-10 mx-auto font-semibold text-4xl lg:text-6xl text-slate-700">
         {units.map(({ label, value }) => (
-          <div key={label} className="flex flex-col gap-2 items-center justify-center">
-            <div
-              className="flex w-20 h-20 lg:w-48 lg:h-48 border-4 border-orange-500 rounded-3xl lg:rounded-4xl items-center justify-center text-center tabular-nums"
-            >
-              {value === null ? "--" : pad(value)}
+          <div
+            key={label}
+            className="group flex flex-col gap-2 items-center justify-center"
+          >
+            <div className="relative flex w-20 h-20 lg:w-48 lg:h-48 overflow-hidden border-4 border-orange-500 rounded-3xl lg:rounded-4xl items-center justify-center text-center tabular-nums transition-all duration-300 group-hover:-translate-y-1 group-hover:border-light-blue group-hover:shadow-xl group-hover:shadow-light-blue/20">
+              <span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-gradient-to-b from-orange-500/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              {/* Keying on the value replays the tick animation each change. */}
+              <span
+                key={value ?? "placeholder"}
+                className="animate-tick-pop relative"
+              >
+                {value === null ? "--" : pad(value)}
+              </span>
             </div>
-            <div className="font-semibold text-sm">{label}</div>
+            <div className="font-semibold text-sm transition-colors duration-300 group-hover:text-light-blue">
+              {label}
+            </div>
           </div>
         ))}
       </div>

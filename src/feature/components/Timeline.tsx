@@ -5,11 +5,11 @@ import SectionHeading from "@/shared/components/SectionHeading";
 import { useReveal } from "@/shared/hooks/useReveal";
 
 const timelineData = [
-  { date: "TBA", title: "Open Registration", type: "start" },
+  { date: "20 Sept - 3 Oct 2026", title: "Open Registration", type: "start" },
   { date: "12 October 2026", title: "Day 1" },
   { date: "14 October 2026", title: "Day 2" },
   { date: "16 October 2026", title: "Day 3" },
-  { date: "17 - 23 October 2026", title: "The Awakening of the Golem" },
+  { date: "17 - 23 October 2026", title: "The Trial of the Labyrinth" },
   { date: "24 October 2026", title: "The Final Odyssey🏆", type: "end" },
 ];
 
